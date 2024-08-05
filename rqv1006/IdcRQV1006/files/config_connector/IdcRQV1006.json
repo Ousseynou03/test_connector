@@ -1,0 +1,36 @@
+{
+    "name": "IdcRQV1006",
+    "config": {
+        "connector.class": "io.indatacore.kafka.connect.http.IdcRQV1006",
+        "http.soap.template.root": "/kafka/services_config/",
+        "producer.bootstrap.server": "${K1}:9092,${K2}:9092,${K3}:9092",
+        "topics": "Display-line-Balance-producer-topic",
+        "tasks.max": "3",
+        "http.soap.name": "IdcRQV1006",
+        "http.headers.content.type": "text/xml; charset=utf-8",
+        "http.url": "https://10.29.146.4:8081/services/BcServices",
+        "producer.target.topic": "Display-line-Balance-consumer-topic",
+        "producer.value.serializer": "org.apache.kafka.common.serialization.StringSerializer",
+        "http.api.type": "SOAP",
+        "key.converter.schemas.enable": "false",
+        "producer.key.serializer": "org.apache.kafka.common.serialization.StringSerializer",
+        "value.converter.schemas.enable": "false",
+        "errors.tolerance": "all",
+        "value.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "http.action": "QueryCustomerInfo",
+        "schemas.enable": "false",
+	"producer.sasl.enabled":"true",
+        "producer.sasl.username":"${file:/kafka/config_connector/IdcRQV1006.properties:producer.sasl.username}",
+        "producer.sasl.password":"${file:/kafka/config_connector/IdcRQV1006.properties:producer.sasl.password}",
+	"connector.client.config.override.policy":"All",
+        "consumer.override.sasl.mechanism":"SCRAM-SHA-512",
+        "consumer.override.security.protocol":"${file:/kafka/config_connector/IdcRQV1006.properties:consumer.override.security.protocol}",
+        "consumer.override.sasl.jaas.config":"${file:/kafka/config_connector/IdcRQV1006.properties:consumer.override.sasl.jaas.config}",
+        "login.system.code":"${file:/kafka/config_connector/IdcRQV1006.properties:login.system.code}",
+        "login.system.password":"${file:/kafka/config_connector/IdcRQV1006.properties:login.system.password}",
+        "system.token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjb25uZWN0b3IiLCJleHAiOjE3MTU2ODY4MzMsImlhdCI6MTcwNzkxMDgzM30.kh9YaLPE0G-9L7uL-a0xT9jvhj-vWrY0Bew9qQc7Yt0"
+
+
+    }
+}

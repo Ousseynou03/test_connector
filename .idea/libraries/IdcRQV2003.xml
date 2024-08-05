@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="IdcRQV2003">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/rqv2003/IdcRQV2003/files/connectors/IdcRQV2003.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

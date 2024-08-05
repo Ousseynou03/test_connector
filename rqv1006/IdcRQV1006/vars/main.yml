@@ -1,0 +1,5 @@
+---
+# vars file for IdcRQV1006
+IdcRQV1006: 
+    - topic : "Display-line-Balance-producer-topic"
+    - target: "Display-line-Balance-consumer-topic"
